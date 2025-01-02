@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>LOAD DATA</title>
+</head>
+
+<body>
+    <span th:if="${message != null}" th:text="${message}"></span>
+    <table border="1" th:if="${data != null && data.size() > 0}">
+        <thead>
+            <tr>
+                <th th:each="col : ${data[0]}">
+                    <span th:text="${col.key}"></span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="row : ${data}">
+                <td th:each="col : ${row}">
+                    <span th:text="${col.value}"></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

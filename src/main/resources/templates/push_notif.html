@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>PUSH NOTIF</title>
+</head>
+
+<body>
+    <span th:if="${message != null}" th:text="${message}"></span>
+    <br><br>
+    <form action="">
+        <input type="text" name="token">
+        <input type="submit" value="SEND">
+    </form>
+</body>
+
+</html>
